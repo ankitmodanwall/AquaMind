@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { AppShell } from '@/components/app-shell';
 
 export const metadata: Metadata = {
-  title: 'AquaSaver Adventures',
+  title: 'AquaMind',
   description: 'An educational game about groundwater conservation.',
 };
 

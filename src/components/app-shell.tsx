@@ -25,7 +25,7 @@ import type { ReactNode } from "react";
 import { Button } from "./ui/button";
 
 const navItems = [
-  { href: "/", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/quiz", label: "Quiz", icon: BookCheck },
   { href: "/resources", label: "Resources", icon: Library },
   { href: "/community", label: "Community", icon: MessageSquare },
@@ -33,6 +33,12 @@ const navItems = [
 
 export function AppShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
+
+  const isWelcomePage = pathname === '/';
+
+  if (isWelcomePage) {
+    return <main className="flex-1 p-4 sm:p-6 md:p-8">{children}</main>;
+  }
 
   return (
     <SidebarProvider>
@@ -44,7 +50,7 @@ export function AppShell({ children }: { children: ReactNode }) {
                     <Droplets className="h-6 w-6" />
                 </Button>
                 <h1 className="text-xl font-bold font-headline tracking-tight text-foreground">
-                    AquaSaver
+                    AquaMind
                 </h1>
             </Link>
           </SidebarHeader>
@@ -52,10 +58,10 @@ export function AppShell({ children }: { children: ReactNode }) {
             <SidebarMenu>
               {navItems.map((item) => (
                 <SidebarMenuItem key={item.label}>
-                  <Link href={item.href} legacyBehavior passHref>
+                  <Link href={item.href}>
                     <SidebarMenuButton
                       as="a"
-                      isActive={pathname === item.href}
+                      isActive={pathname.startsWith(item.href) && (item.href !== '/' || pathname === '/')}
                       tooltip={item.label}
                       className="text-base"
                     >

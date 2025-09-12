@@ -1,43 +1,38 @@
-import { Achievements } from "@/components/dashboard/achievements";
-import { ProgressChart } from "@/components/dashboard/progress-chart";
-import { StatsCards } from "@/components/dashboard/stats-cards";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
-export default function DashboardPage() {
+export default function WelcomePage() {
   return (
-    <div className="flex flex-col gap-8">
-      <header>
-        <h1 className="text-3xl font-bold font-headline tracking-tight">
-          Welcome to AquaSaver!
-        </h1>
-        <p className="text-muted-foreground">
-          Track your progress and continue your mission to save groundwater.
-        </p>
-      </header>
-
-      <StatsCards />
-
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-        <Card className="lg:col-span-2">
-          <CardHeader>
-            <CardTitle>Learning Progress</CardTitle>
-            <CardDescription>
-              Your quiz scores over the last 7 sessions.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ProgressChart />
-          </CardContent>
-        </Card>
-        <div className="lg:col-span-1">
-          <Achievements />
-        </div>
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-10rem)] text-center p-4">
+      <div className="relative w-48 h-48 mb-6">
+        <Image
+          src="https://picsum.photos/seed/logo/200/200"
+          alt="AquaMind Logo"
+          data-ai-hint="water drop"
+          width={192}
+          height={192}
+          className="rounded-full object-cover shadow-lg"
+        />
+      </div>
+      <h1 className="text-5xl font-bold font-headline tracking-tight text-primary">
+        Welcome to AquaMind
+      </h1>
+      <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
+        Your adventure into the world of groundwater conservation starts here. Learn, play, and make a difference!
+      </p>
+      <div className="mt-8 flex gap-4">
+        <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Link href="/dashboard">
+            Get Started <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </Button>
+        <Button asChild size="lg" variant="outline">
+          <Link href="/quiz">
+            Take a Quiz
+          </Link>
+        </Button>
       </div>
     </div>
   );
