@@ -58,7 +58,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             <SidebarMenu>
               {navItems.map((item) => (
                 <SidebarMenuItem key={item.label}>
-                  <Link href={item.href}>
+                  <Link href={item.href} passHref legacyBehavior>
                     <SidebarMenuButton
                       as="a"
                       isActive={pathname.startsWith(item.href) && (item.href !== '/' || pathname === '/')}
