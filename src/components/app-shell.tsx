@@ -58,17 +58,16 @@ export function AppShell({ children }: { children: ReactNode }) {
             <SidebarMenu>
               {navItems.map((item) => (
                 <SidebarMenuItem key={item.label}>
-                  <Link href={item.href} passHref legacyBehavior>
-                    <SidebarMenuButton
-                      as="a"
-                      isActive={pathname.startsWith(item.href) && (item.href !== '/' || pathname === '/')}
-                      tooltip={item.label}
-                      className="text-base"
-                    >
-                      <item.icon className="h-5 w-5" />
-                      <span>{item.label}</span>
-                    </SidebarMenuButton>
-                  </Link>
+                  <SidebarMenuButton
+                    as={Link}
+                    href={item.href}
+                    isActive={pathname.startsWith(item.href) && (item.href !== '/' || pathname === '/')}
+                    tooltip={item.label}
+                    className="text-base"
+                  >
+                    <item.icon className="h-5 w-5" />
+                    <span>{item.label}</span>
+                  </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
