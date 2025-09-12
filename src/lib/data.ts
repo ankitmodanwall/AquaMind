@@ -34,6 +34,55 @@ export type QuizQuestion = {
         options: ["Watering your lawn daily", "Taking long showers", "Fixing leaky faucets", "Washing your car every day"],
         correctAnswer: "Fixing leaky faucets",
         educationalContent: "Water conservation at home plays a big role. A single leaky faucet can waste thousands of gallons of water per year. Simple actions like fixing leaks, installing water-efficient appliances, and watering plants only when necessary can collectively save a huge amount of groundwater.",
+    },
+    {
+      id: 5,
+      question: "What’s the best material to filter rainwater before storing it?",
+      options: ["Sand and charcoal", "Plastic sheets", "Asphalt"],
+      correctAnswer: "Sand and charcoal",
+      educationalContent: "Using natural materials like sand and charcoal is an effective way to filter rainwater. These materials help remove impurities, making the water safer for storage and non-potable uses."
+    },
+    {
+      id: 6,
+      question: "How can we help rainwater reach underground aquifers?",
+      options: ["By paving the ground", "By building recharge wells", "By building walls"],
+      correctAnswer: "By building recharge wells",
+      educationalContent: "Aquifer recharge is the process of allowing water to penetrate the ground and refill the aquifer. Building recharge wells and avoiding impermeable surfaces like pavement helps more rainwater seep into the ground."
+    },
+    {
+      id: 7,
+      question: "Which of these pollutes groundwater the most?",
+      options: ["Broken septic tanks", "Rainwater", "Tree roots"],
+      correctAnswer: "Broken septic tanks",
+      educationalContent: "Broken or poorly maintained septic tanks can leak untreated sewage into the soil, which then contaminates groundwater, posing a significant health risk."
+    },
+    {
+      id: 8,
+      question: "Which crop uses the least water?",
+      options: ["Rice", "Millets", "Sugarcane"],
+      correctAnswer: "Millets",
+      educationalContent: "Choosing water-efficient crops is crucial for sustainable agriculture. Millets are drought-resistant and require significantly less water compared to thirsty crops like rice and sugarcane."
+    },
+    {
+      id: 9,
+      question: "What is groundwater?",
+      options: ["Water in lakes", "Water stored in underground rock layers", "Water from taps"],
+      correctAnswer: "Water stored in underground rock layers",
+      educationalContent: "Groundwater is the water present beneath Earth's surface in soil pore spaces and in the fractures of rock formations. It is a vital source of fresh water."
+    },
+    {
+      id: 10,
+      question: "Which practice helps conserve groundwater?",
+      options: ["Flood irrigation", "Drip irrigation", "Leaving taps open"],
+      correctAnswer: "Drip irrigation",
+      educationalContent: "Drip irrigation is a highly efficient method that delivers water directly to the plant's roots, minimizing evaporation and water waste, which is a key practice for conserving groundwater."
+    },
+    {
+      id: 11,
+      question: "Why is groundwater important?",
+      options: ["It causes floods", "It supplies a large portion of our drinking water", "It’s used only in deserts"],
+      correctAnswer: "It supplies a large portion of our drinking water",
+      educationalContent: "Groundwater is a critical component of the world's freshwater supply. It provides drinking water for a large percentage of the global population and is essential for agriculture and industry."
     }
   ];
   
