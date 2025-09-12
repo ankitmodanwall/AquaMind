@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "resource-1",
+      "description": "An illustration of water seeping into the ground towards an aquifer.",
+      "imageUrl": "https://picsum.photos/seed/res1/600/400",
+      "imageHint": "groundwater journey"
+    },
+    {
+      "id": "resource-2",
+      "description": "A cross-section diagram of different types of geological aquifers.",
+      "imageUrl": "https://picsum.photos/seed/res2/600/400",
+      "imageHint": "aquifer diagram"
+    },
+    {
+      "id": "resource-3",
+      "description": "A person fixing a dripping faucet at home.",
+      "imageUrl": "https://picsum.photos/seed/res3/600/400",
+      "imageHint": "leaky faucet"
+    },
+    {
+      "id": "resource-4",
+      "description": "A dramatic landscape showing a dry, cracked riverbed.",
+      "imageUrl": "https://picsum.photos/seed/res4/600/400",
+      "imageHint": "dry riverbed"
+    },
+    {
+      "id": "resource-5",
+      "description": "An infographic showing sources of groundwater contamination.",
+      "imageUrl": "https://picsum.photos/seed/res5/600/400",
+      "imageHint": "water pollution"
+    },
+    {
+      "id": "resource-6",
+      "description": "An illustration of the water cycle with clouds, rain, and groundwater.",
+      "imageUrl": "https://picsum.photos/seed/res6/600/400",
+      "imageHint": "water cycle"
+    }
+  ]
 }
