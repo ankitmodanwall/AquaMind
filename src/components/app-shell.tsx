@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { Button } from "./ui/button";
+import { ThemeToggle } from "./theme-toggle";
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
@@ -72,7 +73,9 @@ export function AppShell({ children }: { children: ReactNode }) {
               ))}
             </SidebarMenu>
           </SidebarContent>
-          <SidebarFooter>
+          <SidebarFooter className="flex-row items-center border-t p-2">
+            <ThemeToggle />
+            <div className="flex-1" />
             <SidebarTrigger />
           </SidebarFooter>
         </Sidebar>
