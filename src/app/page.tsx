@@ -1,22 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Droplets } from 'lucide-react';
 
 export default function WelcomePage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-10rem)] text-center p-4">
-      <div
-        className="relative w-48 h-48 mb-6 animate-in fade-in zoom-in-50 duration-500"
-      >
-        <Image
-          src="https://picsum.photos/seed/logo/200/200"
-          alt="AquaMind Logo"
-          data-ai-hint="water drop"
-          width={192}
-          height={192}
-          className="rounded-full object-cover shadow-lg"
-        />
+      <div className="relative w-48 h-48 mb-6 animate-in fade-in zoom-in-50 duration-500 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/50 rounded-full blur-2xl"></div>
+        <div className="relative flex items-center justify-center w-36 h-36 bg-background/80 backdrop-blur-sm rounded-full shadow-lg">
+          <Droplets className="w-20 h-20 text-primary" strokeWidth={1.5} />
+        </div>
       </div>
       <h1
         className="text-5xl font-bold font-headline tracking-tight text-primary animate-in fade-in slide-in-from-bottom-4 duration-500 delay-300"
