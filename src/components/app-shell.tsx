@@ -20,6 +20,7 @@ import {
   Library,
   MessageSquare,
   Droplets,
+  Info,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { Button } from "./ui/button";
@@ -30,6 +31,7 @@ const navItems = [
   { href: "/quiz", label: "Quiz", icon: BookCheck },
   { href: "/resources", label: "Resources", icon: Library },
   { href: "/community", label: "Community", icon: MessageSquare },
+  { href: "/about", label: "About", icon: Info },
 ];
 
 export function AppShell({ children }: { children: ReactNode }) {
@@ -38,7 +40,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   const isWelcomePage = pathname === '/';
 
   if (isWelcomePage) {
-    return <main className="flex-1 p-4">{children}</main>;
+    return <main className="flex-1 p-4 sm:p-6">{children}</main>;
   }
 
   return (
