@@ -13,7 +13,7 @@ export default function WelcomePage() {
         </div>
       </div>
       <h1
-        className="text-4xl sm:text-5xl font-bold font-headline tracking-tight text-primary animate-in fade-in slide-in-from-bottom-4 duration-500 delay-300"
+        className="text-4xl sm:text-5xl font-headline tracking-tight text-foreground animate-in fade-in slide-in-from-bottom-4 duration-500 delay-300"
       >
         Welcome to AquaMind
       </h1>
@@ -25,7 +25,7 @@ export default function WelcomePage() {
       <div
         className="mt-8 flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-8 duration-500 delay-500"
       >
-        <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+        <Button asChild size="lg">
           <Link href="/dashboard">
             Get Started <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
