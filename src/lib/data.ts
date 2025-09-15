@@ -92,7 +92,7 @@ export type QuizQuestion = {
       title: "The Journey of Groundwater",
       description: "An animated video explaining how water travels from the surface to become groundwater.",
       type: "Video",
-      link: "#",
+      link: "https://www.youtube.com/watch?v=oNWAerr_xEE",
       imageId: "resource-1",
     },
     {
@@ -100,7 +100,7 @@ export type QuizQuestion = {
       title: "Understanding Aquifers",
       description: "A detailed article on the different types of aquifers and their importance.",
       type: "Article",
-      link: "#",
+      link: "https://www.usgs.gov/special-topics/water-science-school/science/aquifers-and-groundwater",
       imageId: "resource-2",
     },
     {
@@ -108,7 +108,7 @@ export type QuizQuestion = {
       title: "10 Ways to Conserve Water at Home",
       description: "Practical tips and tricks to reduce your water consumption and protect groundwater resources.",
       type: "Article",
-      link: "#",
+      link: "https://www.epa.gov/watersense/start-saving",
       imageId: "resource-3",
     },
     {
@@ -116,7 +116,7 @@ export type QuizQuestion = {
       title: "The Global Groundwater Crisis",
       description: "A short documentary on the challenges of groundwater depletion around the world.",
       type: "Video",
-      link: "#",
+      link: "https://www.youtube.com/watch?v=He--T4E3-yA",
       imageId: "resource-4",
     },
     {
@@ -124,7 +124,7 @@ export type QuizQuestion = {
         title: "Groundwater Contamination Explained",
         description: "Learn about the common sources of groundwater pollution and how to prevent them.",
         type: "Article",
-        link: "#",
+        link: "https://www.usgs.gov/special-topics/water-science-school/science/groundwater-contamination",
         imageId: "resource-5",
     },
     {
@@ -132,7 +132,7 @@ export type QuizQuestion = {
         title: "Interactive Water Cycle",
         description: "Explore an interactive simulation of the water cycle.",
         type: "Simulation",
-        link: "#",
+        link: "https://water.usgs.gov/edu/watercycle-kids-int.html",
         imageId: "resource-6",
     },
   ];
