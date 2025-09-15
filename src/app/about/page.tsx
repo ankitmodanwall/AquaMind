@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Droplets, GaugeCircle, BookOpen, MessagesSquare, Info, Star } from "lucide-react";
+import { Droplets, GaugeCircle, BookOpen, MessagesSquare, Info } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
