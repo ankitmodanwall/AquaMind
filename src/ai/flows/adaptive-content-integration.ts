@@ -43,11 +43,19 @@ const prompt = ai.definePrompt({
   name: 'incorporateEducationalContentPrompt',
   input: {schema: IncorporateEducationalContentInputSchema},
   output: {schema: IncorporateEducationalContentOutputSchema},
-  prompt: `You are an educational game designer. You are designing adaptive feedback for a player. The player will receive the feedback below. You should incorporate additional educational content related to the topic that is appropriate for the players knowledge level into the feedback.
+  prompt: `You are an educational game designer. Your task is to enhance the provided feedback by incorporating additional educational content relevant to the specified topic and tailored to the player's knowledge level.
 
-Original Feedback: {{{feedback}}}
+Original Feedback:
+"{{{feedback}}}"
+
 Player Knowledge Level: {{{playerKnowledgeLevel}}}
 Topic: {{{topic}}}
+
+Instructions:
+1. Review the original feedback, topic, and player knowledge level.
+2. Add valuable, supplementary educational content that deepens the player's understanding.
+3. Ensure the tone is encouraging and supportive.
+4. The final output should be a single, cohesive piece of text.
 
 Enhanced Feedback:`,
 });
@@ -60,6 +68,9 @@ const incorporateEducationalContentFlow = ai.defineFlow(
   },
   async input => {
     const {output} = await prompt(input);
-    return {enhancedFeedback: output!};
+    if (!output) {
+      throw new Error('Could not generate enhanced feedback.');
+    }
+    return output;
   }
 );

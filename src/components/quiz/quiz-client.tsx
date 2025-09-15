@@ -58,7 +58,11 @@ export function QuizClient({ questions }: QuizClientProps) {
       currentQuestion.educationalContent
     );
     
-    setFeedback({ isCorrect, text: result.feedback });
+    if (result.success && result.feedback) {
+      setFeedback({ isCorrect, text: result.feedback });
+    } else {
+      setFeedback({ isCorrect, text: result.feedback || "Sorry, an error occurred while generating your feedback. Please try again." });
+    }
     setIsSubmitting(false);
   };
 

@@ -38,11 +38,14 @@ export async function getEnhancedFeedback(
       feedback: enhancedResult.enhancedFeedback,
     };
   } catch (error) {
+    let message = "Sorry, an error occurred while generating your feedback. Please try again.";
+    if (error instanceof Error) {
+      message = `An error occurred: ${error.message}. Please try again.`;
+    }
     console.error("Error getting enhanced feedback:", error);
     return {
       success: false,
-      feedback:
-        "Sorry, an error occurred while generating your feedback. Please try again.",
+      feedback: message
     };
   }
 }

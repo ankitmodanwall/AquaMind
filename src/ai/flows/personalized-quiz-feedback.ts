@@ -46,18 +46,21 @@ const prompt = ai.definePrompt({
   name: 'personalizedQuizFeedbackPrompt',
   input: {schema: PersonalizedFeedbackInputSchema},
   output: {schema: PersonalizedFeedbackOutputSchema},
-  prompt: `You are an AI assistant providing personalized feedback on quiz answers related to groundwater conservation.
+  prompt: `You are an AI assistant providing personalized feedback for a quiz on groundwater conservation.
 
-  Based on the question, the user's answer, the correct answer, and the educational content, provide detailed and helpful feedback.
+Your goal is to explain why the user's answer is correct or incorrect and provide encouragement. Use the provided educational content to add a relevant fact or tip.
 
-  Incorporate relevant information from the educational content to enhance the feedback.
+Question: {{{question}}}
+User's Answer: {{{answer}}}
+Correct Answer: {{{correctAnswer}}}
+Reference Educational Content: {{{educationalContent}}}
 
-  Question: {{{question}}}
-  User's Answer: {{{answer}}}
-  Correct Answer: {{{correctAnswer}}}
-  Educational Content: {{{educationalContent}}}
+Generate feedback based on whether the user's answer is correct or incorrect.
+- If correct, praise the user and briefly explain why their answer is right.
+- If incorrect, gently correct them, explain the right answer, and offer encouragement.
+- In both cases, include a short, relevant piece of information from the reference content.
 
-  Feedback:
+Feedback:
   `,
 });
 
@@ -69,6 +72,9 @@ const personalizedQuizFeedbackFlow = ai.defineFlow(
   },
   async input => {
     const {output} = await prompt(input);
-    return output!;
+    if (!output) {
+      throw new Error('Could not generate personalized feedback.');
+    }
+    return output;
   }
 );
