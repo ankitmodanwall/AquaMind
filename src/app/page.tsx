@@ -13,17 +13,17 @@ export default function WelcomePage() {
         </div>
       </div>
       <h1
-        className="text-5xl font-bold font-headline tracking-tight text-primary animate-in fade-in slide-in-from-bottom-4 duration-500 delay-300"
+        className="text-4xl sm:text-5xl font-bold font-headline tracking-tight text-primary animate-in fade-in slide-in-from-bottom-4 duration-500 delay-300"
       >
         Welcome to AquaMind
       </h1>
       <p
-        className="mt-4 max-w-2xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-6 duration-500 delay-400"
+        className="mt-4 max-w-2xl text-md sm:text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-6 duration-500 delay-400"
       >
         Your adventure into the world of groundwater conservation starts here. Learn, play, and make a difference!
       </p>
       <div
-        className="mt-8 flex gap-4 animate-in fade-in slide-in-from-bottom-8 duration-500 delay-500"
+        className="mt-8 flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-8 duration-500 delay-500"
       >
         <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
           <Link href="/dashboard">

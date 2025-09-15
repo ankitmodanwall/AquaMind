@@ -38,7 +38,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   const isWelcomePage = pathname === '/';
 
   if (isWelcomePage) {
-    return <main className="flex-1 p-4 sm:p-6 md:p-8">{children}</main>;
+    return <main className="flex-1 p-4">{children}</main>;
   }
 
   return (
@@ -79,7 +79,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             <SidebarTrigger />
           </SidebarFooter>
         </Sidebar>
-        <SidebarInset className="flex-1 p-4 sm:p-6 md:p-8">{children}</SidebarInset>
+        <SidebarInset className="flex-1 p-4 sm:p-6">{children}</SidebarInset>
       </div>
     </SidebarProvider>
   );
