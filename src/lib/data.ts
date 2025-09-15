@@ -136,7 +136,7 @@ export type QuizQuestion = {
         imageId: "resource-6",
     },
   ];
-    
+  
   export const communityThreads = [
     { id: 1, title: "What are your best water-saving tips for the garden?", author: "JaneDoe", replies: 12, lastPost: "2 hours ago" },
     { id: 2, title: "Just learned about aquifer depletion, it's scary!", author: "JohnSmith", replies: 8, lastPost: "5 hours ago" },
