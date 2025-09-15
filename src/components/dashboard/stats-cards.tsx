@@ -14,19 +14,19 @@ export function StatsCards({ quizzesCompleted, averageScore, lessonsViewed }: St
       title: "Quizzes Completed",
       value: quizzesCompleted,
       icon: BookCheck,
-      color: "text-blue-500",
+      color: "text-chart-1",
     },
     {
       title: "Average Score",
       value: `${averageScore}%`,
       icon: Target,
-      color: "text-green-500",
+      color: "text-chart-2",
     },
     {
       title: "Lessons Viewed",
       value: lessonsViewed,
       icon: TrendingUp,
-      color: "text-yellow-500",
+      color: "text-chart-3",
     },
   ];
 
