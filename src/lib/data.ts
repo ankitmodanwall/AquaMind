@@ -136,53 +136,7 @@ export type QuizQuestion = {
         imageId: "resource-6",
     },
   ];
-  
-  export const userProgress = {
-    quizzesCompleted: 5,
-    averageScore: 82,
-    lessonsViewed: 12,
-    quizHistory: [
-      { session: 1, score: 75 },
-      { session: 2, score: 50 },
-      { session: 3, score: 100 },
-      { session: 4, score: 75 },
-      { session: 5, score: 100 },
-    ],
-  };
-  
-  export const achievements = [
-    {
-      id: 1,
-      title: "Quiz Novice",
-      description: "Complete your first quiz.",
-      achieved: true,
-    },
-    {
-      id: 2,
-      title: "Perfect Score",
-      description: "Get 100% on any quiz.",
-      achieved: true,
-    },
-    {
-      id: 3,
-      title: "Resource Explorer",
-      description: "View 5 items from the resource library.",
-      achieved: true,
-    },
-    {
-      id: 4,
-      title: "Aqua Expert",
-      description: "Complete all quizzes with an average score of 80% or higher.",
-      achieved: false,
-    },
-    {
-      id: 5,
-      title: "Community Starter",
-      description: "Start your first discussion in the community forum.",
-      achieved: false,
-    },
-  ];
-  
+    
   export const communityThreads = [
     { id: 1, title: "What are your best water-saving tips for the garden?", author: "JaneDoe", replies: 12, lastPost: "2 hours ago" },
     { id: 2, title: "Just learned about aquifer depletion, it's scary!", author: "JohnSmith", replies: 8, lastPost: "5 hours ago" },

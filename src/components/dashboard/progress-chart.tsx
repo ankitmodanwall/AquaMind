@@ -7,7 +7,6 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { userProgress } from "@/lib/data";
 
 const chartConfig = {
   score: {
@@ -16,13 +15,20 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function ProgressChart() {
+type ProgressChartProps = {
+    history: {
+        session: number;
+        score: number;
+    }[];
+};
+
+export function ProgressChart({ history }: ProgressChartProps) {
   return (
     <div className="h-64 w-full">
       <ChartContainer config={chartConfig} className="h-full w-full">
         <BarChart
           accessibilityLayer
-          data={userProgress.quizHistory}
+          data={history}
           margin={{
             top: 5,
             right: 10,

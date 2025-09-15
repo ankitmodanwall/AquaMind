@@ -1,4 +1,3 @@
-import { achievements } from "@/lib/data";
 import {
   Card,
   CardContent,
@@ -6,9 +5,21 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 import { CheckCircle2, Lock } from "lucide-react";
 
-export function Achievements() {
+type Achievement = {
+  id: number;
+  title: string;
+  description: string;
+  achieved: boolean;
+};
+
+type AchievementsProps = {
+  achievements: Achievement[];
+};
+
+export function Achievements({ achievements }: AchievementsProps) {
   return (
     <Card>
       <CardHeader>
@@ -56,4 +67,28 @@ export function Achievements() {
       </CardContent>
     </Card>
   );
+}
+
+Achievements.Skeleton = function AchievementsSkeleton() {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Achievements</CardTitle>
+        <CardDescription>Challenges you've completed.</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          {[...Array(5)].map((_, i) => (
+            <div key={i} className="flex items-start gap-4">
+              <Skeleton className="mt-1 h-8 w-8 rounded-full" />
+              <div className="flex-1 space-y-2">
+                <Skeleton className="h-4 w-1/2" />
+                <Skeleton className="h-4 w-full" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  )
 }

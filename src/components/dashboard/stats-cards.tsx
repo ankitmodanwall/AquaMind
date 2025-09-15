@@ -1,24 +1,30 @@
-import { userProgress } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 import { BookCheck, Target, TrendingUp } from "lucide-react";
 
-export function StatsCards() {
+type StatsCardsProps = {
+  quizzesCompleted: number;
+  averageScore: number;
+  lessonsViewed: number;
+};
+
+export function StatsCards({ quizzesCompleted, averageScore, lessonsViewed }: StatsCardsProps) {
   const stats = [
     {
       title: "Quizzes Completed",
-      value: userProgress.quizzesCompleted,
+      value: quizzesCompleted,
       icon: BookCheck,
       color: "text-blue-500",
     },
     {
       title: "Average Score",
-      value: `${userProgress.averageScore}%`,
+      value: `${averageScore}%`,
       icon: Target,
       color: "text-green-500",
     },
     {
       title: "Lessons Viewed",
-      value: userProgress.lessonsViewed,
+      value: lessonsViewed,
       icon: TrendingUp,
       color: "text-yellow-500",
     },
@@ -39,4 +45,22 @@ export function StatsCards() {
       ))}
     </div>
   );
+}
+
+StatsCards.Skeleton = function StatsCardsSkeleton() {
+    return (
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            {[...Array(3)].map((_, i) => (
+                <Card key={i}>
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                        <Skeleton className="h-4 w-2/3" />
+                        <Skeleton className="h-4 w-4" />
+                    </CardHeader>
+                    <CardContent>
+                        <Skeleton className="h-8 w-1/3" />
+                    </CardContent>
+                </Card>
+            ))}
+        </div>
+    )
 }
